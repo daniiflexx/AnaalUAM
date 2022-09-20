@@ -32,7 +32,7 @@ int random_num(int inf, int sup)
   if (inf > sup || inf < 0)
     return -1;
 
-  return ((rand() % (sup - inf +1)) + inf);
+  return ((rand() % (sup - inf)) + inf);
 }
 
 /***************************************************/
@@ -54,13 +54,19 @@ int* generate_perm(int N)
 
   if (N <= 0)
     return (NULL);
-  perm = (int *)malloc(sizeof(int)*N);
+  perm = (int *)malloc(sizeof(int)*(N));
+  if (!perm)
+    return NULL;
+
   for ( i = 0; i < N; i++)
     perm[i] = i;
+
   for ( i = 0; i < N; i++)
   {
     n = perm[i];
     n2 = random_num(i, N);
+    if (n2 < 0)
+      return NULL;
     perm[i] = perm[n2];
     perm[n2] = n;
   }
