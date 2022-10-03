@@ -22,7 +22,7 @@ short average_sorting_time(pfunc_sort metodo,
                               int N, 
                               PTIME_AA ptime)
 {
-/* Your code */
+  
 }
 
 /***************************************************/
@@ -46,5 +46,3 @@ short save_time_table(char* file, PTIME_AA ptime, int n_times)
 {
   /* your code */
 }
-
-
