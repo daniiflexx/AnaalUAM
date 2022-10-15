@@ -8,18 +8,15 @@
  * Fecha: 16-09-2019
  *
  */
-<<<<<<< HEAD
 
 #include "times.h"
 #include "sorting.h"
-=======
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include "times.h"
 #include "sorting.h"
 #include "permutations.h"
->>>>>>> 8879561 (nuevo)
 
 /***************************************************/
 /* Function: average_sorting_time Date:            */
@@ -31,9 +28,6 @@ short average_sorting_time(pfunc_sort metodo,
                               int N, 
                               PTIME_AA ptime)
 {
-<<<<<<< HEAD
-  
-=======
   int **perms, **aux;
   int i, OB = 0, min_OB = 2147483647, max_OB = -2147483648;
   double av_OB = 0;
@@ -80,7 +74,6 @@ short average_sorting_time(pfunc_sort metodo,
   }
   free(aux);
   return OK;
->>>>>>> 8879561 (nuevo)
 }
 
 /***************************************************/
@@ -92,9 +85,6 @@ short generate_sorting_times(pfunc_sort method, char* file,
                                 int num_min, int num_max, 
                                 int incr, int n_perms)
 {
-<<<<<<< HEAD
-  /* Your code */
-=======
   int i;
   TIME_AA times;
   FILE *f;
@@ -112,7 +102,6 @@ short generate_sorting_times(pfunc_sort method, char* file,
       return ERR;
   }
   return OK;
->>>>>>> 8879561 (nuevo)
 }
 
 /***************************************************/
@@ -122,9 +111,6 @@ short generate_sorting_times(pfunc_sort method, char* file,
 /***************************************************/
 short save_time_table(char* file, PTIME_AA ptime, int n_times)
 {
-<<<<<<< HEAD
-  /* your code */
-=======
   FILE *f;
 
   f = fopen(file, "a+");
@@ -133,5 +119,4 @@ short save_time_table(char* file, PTIME_AA ptime, int n_times)
   fprintf(f, "SIZE: %d:\nAverage time: %f\nAverage OB: %f\nMax_ob: %d\nMin_ob:%d\n\n", n_times, ptime->time, ptime->average_ob, ptime->max_ob, ptime->min_ob);
   fclose(f);
   return OK;
->>>>>>> 8879561 (nuevo)
 }
