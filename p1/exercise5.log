@@ -1,0 +1,31 @@
+EXERCISE 5
+SIZE: 1:
+Average time: 1.200000
+Average OB: 0.000000
+Max_ob: 0
+Min_ob:0
+
+SIZE: 2:
+Average time: 0.800000
+Average OB: 1.000000
+Max_ob: 1
+Min_ob:1
+
+SIZE: 3:
+Average time: 0.800000
+Average OB: 3.000000
+Max_ob: 3
+Min_ob:3
+
+SIZE: 4:
+Average time: 0.600000
+Average OB: 6.000000
+Max_ob: 6
+Min_ob:6
+
+SIZE: 5:
+Average time: 0.800000
+Average OB: 10.000000
+Max_ob: 10
+Min_ob:10
+

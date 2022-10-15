@@ -30,7 +30,11 @@
 int random_num(int inf, int sup)
 {
   if (inf > sup || inf < 0)
+<<<<<<< HEAD
     return -1;
+=======
+    return ERR;
+>>>>>>> 8879561 (nuevo)
 
   return ((rand() % (sup - inf)) + inf);
 }
@@ -66,7 +70,11 @@ int* generate_perm(int N)
   {
     n = perm[i];
     n2 = random_num(i, N);
+<<<<<<< HEAD
     if (n2 < 0){
+=======
+    if (n2 == ERR){
+>>>>>>> 8879561 (nuevo)
       free(perm);
       return NULL;
     }

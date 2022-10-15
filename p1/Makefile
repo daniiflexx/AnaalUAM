@@ -40,7 +40,11 @@ sorting.o : sorting.c sorting.h
 	@echo "# Depepends on $^"
 	@echo "# Has changed $<"
 	$(CC) $(CFLAGS) -c $<
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 8879561 (nuevo)
 exercise1_test:
 	@./exercise1 -limInf 1 -limSup 10 -numN 100
 
@@ -54,7 +58,11 @@ exercise3_test:
 
 exercise4_test:
 	@echo Running exercise4
+<<<<<<< HEAD
 	@./exercise4 -size 1
+=======
+	@./exercise4 -size 10
+>>>>>>> 8879561 (nuevo)
 
 exercise5_test:
 	@echo Running exercise5

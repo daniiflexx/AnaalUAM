@@ -71,7 +71,11 @@ int main(int argc, char** argv)
     printf("Error in function generate_sorting_times\n");
     exit(-1);
   }
+<<<<<<< HEAD
   printf("Correct output \n");
+=======
+  printf("Correct output \n");  
+>>>>>>> 8879561 (nuevo)
 
   return 0;
 }

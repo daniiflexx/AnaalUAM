@@ -61,7 +61,11 @@ int main(int argc, char** argv)
     printf("%d \t", perm[j]);
   }
   printf("\n");
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 8879561 (nuevo)
   free(perm);
 
   return 0;
