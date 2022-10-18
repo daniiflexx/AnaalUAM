@@ -37,7 +37,7 @@ int SelectSort(int* array, int ip, int iu)
   return (x);
 }
 
-
+// hola
 int SelectSortInv(int *array, int ip, int iu)
 {
   int i, maxim, aux, x;
