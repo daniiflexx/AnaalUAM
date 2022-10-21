@@ -9,8 +9,6 @@
  *
  */
 
-#include "times.h"
-#include "sorting.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -18,10 +16,20 @@
 #include "sorting.h"
 #include "permutations.h"
 
+
 /***************************************************/
-/* Function: average_sorting_time Date:            */
 /*                                                 */
-/* Your documentation                              */
+/* Function: AverageSortingTime Date: 21/10/2022   */
+/* Authors: Daniel Birsan y Daniel Cruz            */
+/*                                                 */
+/* Input: A sorting method, perms and time DataStr.*/
+/* pfunc_sort: sorting method                      */
+/* int n_perms: number of permutations             */
+/* int N: number of executions                     */
+/* PTIME_AA: Time data structure                   */
+/* Output: OK if everything ran correctly,         */
+/*    otherwise ERR                                */
+/* short: OK, ERR                                  */
 /***************************************************/
 short average_sorting_time(pfunc_sort metodo, 
                               int n_perms,
@@ -77,9 +85,20 @@ short average_sorting_time(pfunc_sort metodo,
 }
 
 /***************************************************/
-/* Function: generate_sorting_times Date:          */
 /*                                                 */
-/* Your documentation                              */
+/* Function: GenerateSortingTimes Date: 21/10/2022 */
+/* Authors: Daniel Birsan y Daniel Cruz            */
+/*                                                 */
+/* Input: A sorting method, OBs data and a file    */
+/* pfunc_sort: sorting method                      */
+/* int n_perms: number of permutations             */
+/* int num_min: minimun number of OB               */
+/* int num_max: maximum number of OB               */
+/* char* file: file where data will be written     */
+/* int incr: increase                              */
+/* Output: OK if everything ran correctly,         */
+/*    otherwise ERR                                */
+/* short: OK, ERR                                  */
 /***************************************************/
 short generate_sorting_times(pfunc_sort method, char* file, 
                                 int num_min, int num_max, 
@@ -105,9 +124,17 @@ short generate_sorting_times(pfunc_sort method, char* file,
 }
 
 /***************************************************/
-/* Function: save_time_table Date:                 */
 /*                                                 */
-/* Your documentation                              */
+/* Function: SaveTimeTable Date: 21/10/2022        */
+/* Authors: Daniel Birsan y Daniel Cruz            */
+/*                                                 */
+/* Input: file, number of inputs and time DataStr. */
+/* int n_times: number of times to write           */
+/* PTIME_AA: Time data structure                   */
+/* char* file: file where data is written          */
+/* Output: OK if everything ran correctly,         */
+/*    otherwise ERR                                */
+/* short: OK, ERR                                  */
 /***************************************************/
 short save_time_table(char* file, PTIME_AA ptime, int n_times)
 {
