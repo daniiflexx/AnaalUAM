@@ -36,8 +36,8 @@ int random_num(int inf, int sup)
 }
 
 /***************************************************/
-/* Function: generate_perm Date:                   */
-/* Authors:                                        */
+/* Function: generate_perm Date: 21/10/2022        */
+/* Authors: Daniel Cruz y Daniel Birsan            */
 /*                                                 */
 /* Rutine that generates a random permutation      */
 /*                                                 */
@@ -77,8 +77,8 @@ int* generate_perm(int N)
 }
 
 /***************************************************/
-/* Function: generate_permutations Date:           */
-/* Authors:                                        */
+/* Function: generate_permutations Date: 21/10/2022*/
+/* Authors: Daniel Cruz y Daniel Birsan            */
 /*                                                 */
 /* Function that generates n_perms random          */
 /* permutations with N elements                    */

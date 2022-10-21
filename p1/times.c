@@ -64,7 +64,7 @@ short average_sorting_time(pfunc_sort metodo,
   ptime->min_ob = min_OB;
   ptime->max_ob = max_OB;
   ptime->average_ob = av_OB;
-  ptime->time = time;
+  ptime->time = time / CLOCKS_PER_SEC;
   ptime->n_elems = n_perms;
   ptime->N = N;
   
