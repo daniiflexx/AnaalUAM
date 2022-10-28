@@ -1,0 +1,121 @@
+EXERCISE 5
+SIZE: 1:
+Average time: 0.000002
+Average OB: 0.000000
+Max_ob: 0
+Min_ob:0
+
+SIZE: 51:
+Average time: 0.000034
+Average OB: 266.296000
+Max_ob: 399
+Min_ob:211
+
+SIZE: 101:
+Average time: 0.000071
+Average OB: 655.433000
+Max_ob: 934
+Min_ob:546
+
+SIZE: 151:
+Average time: 0.000111
+Average OB: 1094.599000
+Max_ob: 1580
+Min_ob:908
+
+SIZE: 201:
+Average time: 0.000157
+Average OB: 1578.672000
+Max_ob: 2124
+Min_ob:1342
+
+SIZE: 251:
+Average time: 0.000199
+Average OB: 2068.714000
+Max_ob: 2878
+Min_ob:1751
+
+SIZE: 301:
+Average time: 0.000260
+Average OB: 2584.953000
+Max_ob: 3259
+Min_ob:2221
+
+SIZE: 351:
+Average time: 0.000313
+Average OB: 3127.097000
+Max_ob: 4639
+Min_ob:2702
+
+SIZE: 401:
+Average time: 0.000344
+Average OB: 3686.776000
+Max_ob: 4877
+Min_ob:3095
+
+SIZE: 451:
+Average time: 0.000388
+Average OB: 4226.205000
+Max_ob: 5698
+Min_ob:3634
+
+SIZE: 501:
+Average time: 0.000441
+Average OB: 4836.741000
+Max_ob: 6149
+Min_ob:4120
+
+SIZE: 551:
+Average time: 0.000489
+Average OB: 5395.179000
+Max_ob: 6735
+Min_ob:4669
+
+SIZE: 601:
+Average time: 0.000541
+Average OB: 5991.411000
+Max_ob: 8233
+Min_ob:5128
+
+SIZE: 651:
+Average time: 0.000591
+Average OB: 6595.865000
+Max_ob: 8534
+Min_ob:5780
+
+SIZE: 701:
+Average time: 0.000646
+Average OB: 7221.359000
+Max_ob: 9117
+Min_ob:6340
+
+SIZE: 751:
+Average time: 0.000695
+Average OB: 7829.794000
+Max_ob: 10122
+Min_ob:6803
+
+SIZE: 801:
+Average time: 0.000746
+Average OB: 8428.848000
+Max_ob: 10524
+Min_ob:7464
+
+SIZE: 851:
+Average time: 0.000799
+Average OB: 9059.912000
+Max_ob: 11014
+Min_ob:7972
+
+SIZE: 901:
+Average time: 0.000852
+Average OB: 9678.682000
+Max_ob: 12869
+Min_ob:8490
+
+SIZE: 951:
+Average time: 0.000924
+Average OB: 10312.302000
+Max_ob: 12620
+Min_ob:8996
+
