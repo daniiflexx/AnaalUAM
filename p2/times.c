@@ -49,6 +49,7 @@ short average_sorting_time(pfunc_sort metodo,
     return ERR;
   aux = perms;
   for (i = 0; i < n_perms; i++) {
+    SelectSort(*perms, 0, N - 1);
     begin = clock();
     if ((OB = metodo(*perms, 0, N - 1) ) == ERR) {
       for ( i = 0; i < n_perms; i++) {
@@ -111,7 +112,6 @@ short generate_sorting_times(pfunc_sort method, char* file,
   f = fopen(file, "w");
   if (!f)
     return ERR;
-  fprintf(f, "EXERCISE 5\n");
   fclose(f);
   for ( i = num_min; i <= num_max; i+=incr)
   {
@@ -136,6 +136,7 @@ short generate_sorting_times(pfunc_sort method, char* file,
 /*    otherwise ERR                                */
 /* short: OK, ERR                                  */
 /***************************************************/
+
 short save_time_table(char* file, PTIME_AA ptime, int n_times)
 {
   FILE *f;
@@ -143,7 +144,7 @@ short save_time_table(char* file, PTIME_AA ptime, int n_times)
   f = fopen(file, "a+");
   if (!f)
     return ERR;
-  fprintf(f, "SIZE: %d:\nAverage time: %f\nAverage OB: %f\nMax_ob: %d\nMin_ob:%d\n\n", n_times, ptime->time, ptime->average_ob, ptime->max_ob, ptime->min_ob);
+  fprintf(f, "%d %d\n", n_times, ptime->min_ob);
   fclose(f);
   return OK;
 }

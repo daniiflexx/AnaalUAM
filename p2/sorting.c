@@ -208,14 +208,13 @@ int median_avg(int *tabla, int ip, int iu, int *pos) {
   return (0);
 }
 
-int median stat(int *tabla, int ip, int iu, int *pos) {
-  int x;
-
-  median_avg(tabla, ip, iu, *pos);
-  if (tabla[iu] > tabla[*pos] && tabla[ip] > tabla[iu]);
+int median_stat(int *tabla, int ip, int iu, int *pos) {
+  median_avg(tabla, ip, iu, pos);
+  if ((tabla[iu] > tabla[*pos] && tabla[ip] > tabla[iu]) || (tabla[iu] > tabla[ip] && tabla[*pos] > tabla[iu])) {
     *pos = iu;
-  if (tabla[ip] > tabla[*pos] && tabla[iu] > tabla[ip]);
+    return (4);
+  }
+  if ((tabla[ip] > tabla[*pos] && tabla[iu] > tabla[ip]) || (tabla[ip] > tabla[iu] && tabla[*pos] > tabla[ip]))
     *pos = ip;
-
-  
+  return (8);
 }
