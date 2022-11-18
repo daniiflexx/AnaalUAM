@@ -49,7 +49,6 @@ short average_sorting_time(pfunc_sort metodo,
     return ERR;
   aux = perms;
   for (i = 0; i < n_perms; i++) {
-    SelectSort(*perms, 0, N - 1);
     begin = clock();
     if ((OB = metodo(*perms, 0, N - 1) ) == ERR) {
       for ( i = 0; i < n_perms; i++) {
@@ -144,7 +143,7 @@ short save_time_table(char* file, PTIME_AA ptime, int n_times)
   f = fopen(file, "a+");
   if (!f)
     return ERR;
-  fprintf(f, "%d %d\n", n_times, ptime->min_ob);
+  fprintf(f, "%d %f\n", n_times, ptime->time);
   fclose(f);
   return OK;
 }
