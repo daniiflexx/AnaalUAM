@@ -54,7 +54,7 @@ short average_search_time(pfunc_search metodo, pfunc_key_generator generator, in
   ptime->n_elems = N*n_times;
   for (i = 0; i < ptime->n_elems; i++) {
     start = clock();
-    if ((ob = metodo(dic->table, 0, N-1, keys[i], &pos)) == ERR) {
+    if ((ob = metodo(dic->table, 0, N, keys[i], &pos)) == ERR) {
       free_dictionary(dic);
       free(perm);
       free(keys);
@@ -106,7 +106,7 @@ short save_time_table(char* file, PTIME_AA ptime, int n_times)
   f = fopen(file, "a+");
   if (!f)
     return ERR;
-  fprintf(f, "%d %f\n", n_times, ptime->time);
+  fprintf(f, "%d %f\n", n_times, ptime->average_ob);
   fclose(f);
   return OK;
 }
