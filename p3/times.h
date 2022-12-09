@@ -31,6 +31,8 @@ typedef struct time_aa {
   int max_ob;      /* maximum of executions of the OB */
 } TIME_AA, *PTIME_AA;
 
+short save_time_table(char* file, PTIME_AA ptime, int n_times);
+
 short generate_search_times(pfunc_search method, pfunc_key_generator generator, 
                                 int order, char* file, 
                                 int num_min, int num_max, 
