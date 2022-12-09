@@ -181,10 +181,6 @@ int lin_search(int *table,int F,int L,int key, int *ppos)
   for (i = F; i <= L; i++) {
     if (table[i] == key) {
       *ppos = i;
-      while (j <= L) {
-        printf("%d ", table[j++]);
-      }
-      printf("\n\n");
       return i+1;
     }
   }
