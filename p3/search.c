@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <unistd.h>
 
 /**
  *  Key generation functions
@@ -145,7 +146,7 @@ int bin_search(int *table,int F,int L,int key, int *ppos)
 
   if (!table || F > L || !ppos)
     return ERR;
-
+  *ppos = 0;
   while(F <= L)
   {
     c++;
@@ -157,22 +158,20 @@ int bin_search(int *table,int F,int L,int key, int *ppos)
     }
     else if (key < table[m])
     {
-      L = m--;
+      L = --m;
     }
     else
     {
-      F = m++;
+      F = ++m;
     }
   }
-
   (*ppos) = NOT_FOUND;
-  return NOT_FOUND;
+  return c;
 }
 
 int lin_search(int *table,int F,int L,int key, int *ppos)
 {
   int i;
-  int j = 0;
 
 	if (!table || !ppos)
     return ERR;
@@ -185,10 +184,6 @@ int lin_search(int *table,int F,int L,int key, int *ppos)
     }
   }
   *ppos = NOT_FOUND;
-  while (j <= L) {
-    printf("%d ", table[j++]);
-  }
-  printf("\n\n");
   return i;
 }
 

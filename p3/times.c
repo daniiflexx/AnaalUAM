@@ -22,7 +22,7 @@ short average_search_time(pfunc_search metodo, pfunc_key_generator generator, in
 {
   PDICT dic;
   int *perm, *keys, i, pos = 0, ob = 0;
-  int maxob = -(__INT_MAX__), minob = __INT_MAX__;
+  int maxob = -2147483648, minob = 2147483647;
   clock_t start, end;
   float avg = 0, avgob = 0;
 
@@ -52,21 +52,22 @@ short average_search_time(pfunc_search metodo, pfunc_key_generator generator, in
   uniform_key_generator(keys, N*n_times, N*n_times);
   ptime->N = N;
   ptime->n_elems = N*n_times;
-  for (i = 0; i < ptime->n_elems; i++) {
+  for (i = 0; i < ptime->n_elems; i++) 
+  {
     start = clock();
-    if ((ob = metodo(dic->table, 0, N, keys[i], &pos)) == ERR) {
+    if ((ob = search_dictionary(dic, keys[i], &pos, metodo)) == ERR) {
       free_dictionary(dic);
       free(perm);
       free(keys);
       return ERR;
     }
+    end = clock();
     if (ob <= minob)
       minob = ob;
     if (ob >= maxob)
       maxob = ob;
-    end = clock();
     avgob += ob;
-    avg += (float) start / end;
+    avg += (end - start);
   }
   ptime->time = (float) avg / ptime->n_elems;
   ptime->average_ob = (float) avgob / ptime->n_elems;

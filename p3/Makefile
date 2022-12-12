@@ -50,8 +50,8 @@ times.o : times.c times.h search.h
 
 exercise1_test:
 	@echo Running exercise1
-	@./exercise1 -size 10 -key 5
+	@./exercise1 -size 10 -key 3
 
 exercise2_test:
 	@echo Running exercise2
-	@./exercise2 -num_min 1 -num_max 5 -incr 1 -n_times 1 -outputFile exercise5.log
+	@./exercise2 -num_min 1 -num_max 1000 -incr 199 -n_times 10000 -outputFile linorob10000.log
