@@ -54,4 +54,4 @@ exercise1_test:
 
 exercise2_test:
 	@echo Running exercise2
-	@./exercise2 -num_min 1 -num_max 1000 -incr 199 -n_times 10000 -outputFile linorob10000.log
+	@./exercise2 -num_min 1 -num_max 10000 -incr 200 -n_times 100 -outputFile linorob100.log

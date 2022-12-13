@@ -87,15 +87,18 @@ short generate_search_times(pfunc_search method, pfunc_key_generator generator, 
   FILE *f;
 
   f = fopen(file, "w");
-  if (!f)
+  if (!f) {
     return ERR;
+  }
   fclose(f);
   for ( i = num_min; i <= num_max; i+=incr)
   {
-    if (average_search_time(method, generator, order, i, n_times ,&times) == ERR)
+    if (average_search_time(method, generator, order, i, n_times ,&times) == ERR) {
       return ERR;
-    if (save_time_table(file, &times, i) == ERR)
+    }
+    if (save_time_table(file, &times, i) == ERR) {
       return ERR;
+    }
   }
   return OK;
 }

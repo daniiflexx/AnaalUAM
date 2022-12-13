@@ -193,7 +193,6 @@ int lin_auto_search(int *table,int F,int L,int key, int *ppos)
   int c = 0;
 
   if (!table || F > L || !ppos) return ERR;
-
   if(table[0] == key)
   {
     (*ppos) = 0;
@@ -214,7 +213,7 @@ int lin_auto_search(int *table,int F,int L,int key, int *ppos)
     }
     F++;
   } 
-  return ERR;
+  return c;
 }
 
 
