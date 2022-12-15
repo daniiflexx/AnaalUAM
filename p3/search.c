@@ -62,6 +62,9 @@ PDICT init_dictionary (int size, char order)
 {
 	PDICT dic;
 
+  if (size < 0 || (order != 1 && order != 0))
+    return NULL;
+
   dic = (PDICT) malloc(sizeof(DICT));
   if (!dic)
     return NULL;
@@ -173,7 +176,7 @@ int lin_search(int *table,int F,int L,int key, int *ppos)
 {
   int i;
 
-	if (!table || !ppos)
+	if (!table || !ppos || F > L)
     return ERR;
   
   i = 0;

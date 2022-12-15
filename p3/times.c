@@ -26,6 +26,9 @@ short average_search_time(pfunc_search metodo, pfunc_key_generator generator, in
   clock_t start, end;
   float avg = 0, avgob = 0;
 
+  if (!ptime || !generator || !metodo)
+    return ERR;
+
   dic = init_dictionary(N, order);
   if (!dic)
     return ERR;
@@ -86,6 +89,9 @@ short generate_search_times(pfunc_search method, pfunc_key_generator generator, 
   TIME_AA times;
   FILE *f;
 
+  if (!method || !file || !generator)
+    return ERR;
+
   f = fopen(file, "w");
   if (!f) {
     return ERR;
@@ -106,6 +112,9 @@ short generate_search_times(pfunc_search method, pfunc_key_generator generator, 
 short save_time_table(char* file, PTIME_AA ptime, int n_times)
 {
   FILE *f;
+
+  if (!file || !ptime)
+    return ERR;
 
   f = fopen(file, "a+");
   if (!f)
